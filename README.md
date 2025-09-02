@@ -26,6 +26,8 @@ Qero Research offers a fair marketplace where creators upload documents, set pri
 **Value:** Buyers get targeted access at lower costs; creators earn transparently; the ecosystem gains a sustainable model.
 
 ## Technical Design & Filecoin Integration
+<img width="414" height="423" alt="Screenshot 2025-09-02 204051" src="https://github.com/user-attachments/assets/8a00e438-de82-4fc4-887d-fce31d7408a1" />
+
 **Architecture Overview:**
 - **Frontend:** React/Next.js for dashboards, search, and payments. Uses Synapse SDK for Filecoin interactions.
 - **Backend:** Node.js API for search and retrieval. Deploys on Filecoin's cloud.
@@ -33,6 +35,7 @@ Qero Research offers a fair marketplace where creators upload documents, set pri
 - **Payments:** Filecoin Pay for secure, on-chain transactions.
 - **AI/Semantic Functionality:** Integrates semantic search (e.g., vector embeddings for context-aware queries) and AI for intelligent previews/summaries (using models like GPT or open-source alternatives). Retrieval Augmented Generation (RAG) can enhance query responses by pulling relevant document snippets.
 - **Security:** Encryption, access controls, Filecoin SLAs.
+<img width="947" height="503" alt="Screenshot 2025-09-02 203956" src="https://github.com/user-attachments/assets/3ff0e0f7-0cf8-4c28-9897-675ed2088007" />
 
 **Integration Depth:** Synapse SDK manages uploads/retrieval/payments. Full-stack use of Filecoin primitives for verifiability.
 
@@ -45,10 +48,19 @@ Qero Research offers a fair marketplace where creators upload documents, set pri
 This ensures scalability, documentation, and best practices.
 
 ## Product Design
-<img width="1063" height="615" alt="Screenshot 2025-09-02 195623" src="https://github.com/user-attachments/assets/aa746dcd-c2b6-443b-bf5d-6d4ccda119b5" />
-<img width="1062" height="611" alt="Screenshot 2025-09-02 195519" src="https://github.com/user-attachments/assets/0dc10212-066c-47f1-a4e2-983da5e4a703" />
-<img width="1063" height="609" alt="Screenshot 2025-09-02 195852" src="https://github.com/user-attachments/assets/e7194171-aee5-4689-9e57-313d975c4f0d" />
-<img width="1055" height="619" alt="Screenshot 2025-09-02 195807" src="https://github.com/user-attachments/assets/03358a13-5d06-46c4-9858-a90daa4ab5cc" />
+
+### Semantic Search: Discover valuable documents with AI-powered, context-aware search and filters.
+<img width="1063" height="615" alt="Document Dashboard" src="https://github.com/user-attachments/assets/aa746dcd-c2b6-443b-bf5d-6d4ccda119b5" />
+
+### Document Detail View: Comprehensive overview of a document, author, stats, and purchase options.
+<img width="1062" height="611" alt="Creator Analytics" src="https://github.com/user-attachments/assets/0dc10212-066c-47f1-a4e2-983da5e4a703" />
+
+### Creator Analytics: Detailed document metrics, collaboration management, and AI insights for creators.
+<img width="1063" height="609" alt="Semantic Search" src="https://github.com/user-attachments/assets/e7194171-aee5-4689-9e57-313d975c4f0d" />
+
+### Document Dashboard: Centralized view of uploaded documents, sales, and performance.
+<img width="1055" height="619" alt="Document Detail View" src="https://github.com/user-attachments/assets/03358a13-5d06-46c4-9858-a90daa4ab5cc" />
+
 
 ## GTM & Cohort Alignment
 Targets research/legal/corporate users with partnerships. Aligns with cohort by validating Filecoin Onchain Cloud for real problems and providing feedback.
