@@ -45,13 +45,10 @@ Qero Research offers a fair marketplace where creators upload documents, set pri
 This ensures scalability, documentation, and best practices.
 
 ## Product Design
-<img width="1063" height="609" alt="Screenshot 2025-09-02 195852" src="https://github.com/user-attachments/assets/e7194171-aee5-4689-9e57-313d975c4f0d" />
-<img width="1055" height="619" alt="Screenshot 2025-09-02 195807" src="https://github.com/user-attachments/assets/03358a13-5d06-46c4-9858-a90daa4ab5cc" />
 <img width="1063" height="615" alt="Screenshot 2025-09-02 195623" src="https://github.com/user-attachments/assets/aa746dcd-c2b6-443b-bf5d-6d4ccda119b5" />
 <img width="1062" height="611" alt="Screenshot 2025-09-02 195519" src="https://github.com/user-attachments/assets/0dc10212-066c-47f1-a4e2-983da5e4a703" />
-
-
-
+<img width="1063" height="609" alt="Screenshot 2025-09-02 195852" src="https://github.com/user-attachments/assets/e7194171-aee5-4689-9e57-313d975c4f0d" />
+<img width="1055" height="619" alt="Screenshot 2025-09-02 195807" src="https://github.com/user-attachments/assets/03358a13-5d06-46c4-9858-a90daa4ab5cc" />
 
 ## GTM & Cohort Alignment
 Targets research/legal/corporate users with partnerships. Aligns with cohort by validating Filecoin Onchain Cloud for real problems and providing feedback.
