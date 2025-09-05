@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Qero Research: Decentralized Document Marketplace
 
-## Getting Started
+## Project Overview
+Qero Research is a decentralized marketplace for high-value documents, enabling users to upload PDFs (e.g., research papers, legal briefs, corporate reports), set custom prices, and allow others to search, preview, and purchase access. It uses Filecoin Storage for immutable, verifiable document storage and Filecoin Pay for seamless, on-chain payments—creating a transparent alternative to centralized platforms that lack ownership guarantees or efficient discovery.
 
-First, run the development server:
+**Core Goal:** Empower creators to monetize intellectual property while providing buyers with reliable access to premium knowledge. By integrating decentralized storage with smart search, Qero Research addresses gaps in trust, cost, and usability in document sharing.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Problem Definition
+Valuable documents are often trapped in expensive, centralized platforms with limited access and creator control. Buyers encounter:
+- **Access Barriers:** Recurring fees or limited previews on sites like Academia.edu or ResearchGate.
+- **Creator Disempowerment:** No easy way to sell content without intermediaries or IP risks.
+- **Inefficient Search:** Keyword-based tools yield irrelevant results, wasting time in fields like academics or legal.
+- **Trust Gaps:** Centralized systems can't verify authenticity or prevent unauthorized use.
+
+This impacts real users: Researchers struggle with paywalls, businesses overpay for reports, and creators lose revenue to platforms. For decentralized storage, it highlights needs for verifiable retrieval and integrated payments.
+
+## Solution & Value Proposition
+Qero Research offers a fair marketplace where creators upload documents, set prices, and earn directly via Filecoin Pay. Buyers search, preview, and pay for access. Key features include:
+- Smart Previews: Summaries or excerpts before purchase.
+- Flexible Pricing: Per document, section, or query.
+- Ownership Proof: On-chain verification via Filecoin.
+- Analytics: Insights for creators on usage.
+
+**Why Filecoin?** It builds on warm storage and payments for composable services, ensuring decentralized reliability.
+
+**Value:** Buyers get targeted access at lower costs; creators earn transparently; the ecosystem gains a sustainable model.
+
+## Technical Design & Filecoin Integration
+<img width="414" height="423" alt="Screenshot 2025-09-02 204051" src="https://github.com/user-attachments/assets/8a00e438-de82-4fc4-887d-fce31d7408a1" />
+
+**Architecture Overview:**
+- **Frontend:** React/Next.js for dashboards, search, and payments. Uses Synapse SDK for Filecoin interactions.
+- **Backend:** Node.js API for search and retrieval. Deploys on Filecoin's cloud.
+- **Storage & Retrieval:** Filecoin Warm Storage with PDP; FilCDN for fast access.
+- **Payments:** Filecoin Pay for secure, on-chain transactions.
+- **AI/Semantic Functionality:** Integrates semantic search (e.g., vector embeddings for context-aware queries) and AI for intelligent previews/summaries (using models like GPT or open-source alternatives). Retrieval Augmented Generation (RAG) can enhance query responses by pulling relevant document snippets.
+- **Security:** Encryption, access controls, Filecoin SLAs.
+<img width="947" height="503" alt="Screenshot 2025-09-02 203956" src="https://github.com/user-attachments/assets/3ff0e0f7-0cf8-4c28-9897-675ed2088007" />
+
+**Integration Depth:** Synapse SDK manages uploads/retrieval/payments. Full-stack use of Filecoin primitives for verifiability.
+
+**System Diagram (High-Level):**
+```
+[Upload] ? [Synapse SDK] ? [Filecoin Storage]
+[Search] ? [AI Engine (Semantic/RAG)] ? [Preview via FilCDN] ? [Pay via Filecoin Pay] ? [Access]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This ensures scalability, documentation, and best practices.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Product Design
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Semantic Search: Discover valuable documents with AI-powered, context-aware search and filters.
+<img width="1063" height="615" alt="Document Dashboard" src="https://github.com/user-attachments/assets/aa746dcd-c2b6-443b-bf5d-6d4ccda119b5" />
 
-## Learn More
+### Document Detail View: Comprehensive overview of a document, author, stats, and purchase options.
+<img width="1062" height="611" alt="Creator Analytics" src="https://github.com/user-attachments/assets/0dc10212-066c-47f1-a4e2-983da5e4a703" />
 
-To learn more about Next.js, take a look at the following resources:
+### Creator Analytics: Detailed document metrics, collaboration management, and AI insights for creators.
+<img width="1063" height="609" alt="Semantic Search" src="https://github.com/user-attachments/assets/e7194171-aee5-4689-9e57-313d975c4f0d" />
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Document Dashboard: Centralized view of uploaded documents, sales, and performance.
+<img width="1055" height="619" alt="Document Detail View" src="https://github.com/user-attachments/assets/03358a13-5d06-46c4-9858-a90daa4ab5cc" />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## GTM & Cohort Alignment
+Targets research/legal/corporate users with partnerships. Aligns with cohort by validating Filecoin Onchain Cloud for real problems and providing feedback.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Existing Competitors
+Focusing on general document marketplaces:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Scribd**: Valuation ~$500M-$1B; Revenue ~$200M. Strong in user content but lacks decentralized storage or semantic AI.
+2. **Academia.edu**: Valuation $50M-$100M. Revenue from ads; ~10M users, but no creator monetization or advanced search.
+3. **ResearchGate**: Valuation ~$1B+; Revenue ~$100M. Acquired for ~$471M; focuses on networking with paywalls, no fine-grained access.
+
+## Advantages of Qero Research
+- **Decentralized Ownership:** Unlike Scribd/Academia.edu's centralized control, Filecoin ensures creators own data with on-chain proofs, reducing piracy risks.
+- **Integrated Payments:** Filecoin Pay enables direct, low-fee monetization vs. ResearchGate's high platform cuts.
+- **Semantic AI Features:** Advanced search and AI previews (e.g., context-aware queries, summaries) outperform keyword-only tools, delivering faster, more accurate results than all three.
+- **Cost Efficiency:** Buyers pay per need (e.g., $0.50/section) vs. subscriptions; creators earn transparently without ads.
+- **Scalability & Trust:** Filecoin's verifiable storage solves authenticity issues, making it more reliable for high-stakes docs than private platforms.
