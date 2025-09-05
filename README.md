@@ -1,5 +1,8 @@
 # Qero Research: Decentralized Document Marketplace
 
+## Detailed RoadMap and Project plan - 
+https://www.notion.so/Qero-Research-26594925a83f806486def52894ad7f15?showMoveTo=true&saveParent=true
+
 ## Project Overview
 Qero Research is a decentralized marketplace for high-value documents, enabling users to upload PDFs (e.g., research papers, legal briefs, corporate reports), set custom prices, and allow others to search, preview, and purchase access. It uses Filecoin Storage for immutable, verifiable document storage and Filecoin Pay for seamless, on-chain payments—creating a transparent alternative to centralized platforms that lack ownership guarantees or efficient discovery.
 
